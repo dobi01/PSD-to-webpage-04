@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="html">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,10 +21,25 @@
   <meta property="og:url" content="https://awww.software/">
   <meta property="og:image" content="">
   <meta property="og:description" content="We create dynamic websites and eCommerce. We know that new image is new possibilities and new possibilities are the new clients.">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Work+Sans" rel="stylesheet">
   <link rel="stylesheet" media="screen" href="css/style.prefixed.css">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
 </head>
-<body>
-  
+<body class="body">
+  <script>document.body.className += " body--fade-out";</script>
+  <nav class="nav">
+    <img class="nav_logo" src="img/AWWW_logo.png" alt="AWWW Software logo">
+    <ul class="nav__menu">
+      <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Case studies</a></li>
+      <li class="nav__item" class="nav__link"><a href="#" class="nav__link nav__link--border">Contact</a></li>
+    </ul>
+  </nav>
+  <header class="hero">
+    <div class="hero__background"></div>
+    <!-- <img src="img/bg2.jpg" alt="background picture of AWWW Software team at work" class="hero__background"> -->
+  </header>
+  <script src="js/script.js"></script>
 </body>
 </html>

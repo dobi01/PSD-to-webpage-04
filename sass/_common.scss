@@ -1,0 +1,37 @@
+// Reset for BEM independent components (instead of standard global CSS reset)
+%reset {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+// * {
+//   border: 1px solid red;
+// }
+
+$white: #fff;
+$blue--h2: #72b2f2;
+$blue-light--button: #6166ed;
+$blue-dark--button: #312e64; 
+$blue-dark--h2: #161765;
+$blue--border: #5c7cc7;
+$violet--h1: #4b479e;
+$black--text: #333336;
+$green--text: #7dbd6e;
+
+.html, .body {
+  @extend %reset;
+  text-size-adjust: none;
+  overflow-x: hidden;
+  background-color: #fff;
+  opacity: 1;
+  transition: opacity .8s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.body--fade-out {
+  opacity: 0;
+	background: #fff;
+	transition: none;
+}

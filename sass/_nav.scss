@@ -1,0 +1,53 @@
+.nav {
+  @extend %reset;
+  width: 1280px;
+  height: 80px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  // border: 2px solid yellow;
+  display: block;
+}
+
+.nav_logo {
+  @extend %reset;
+  height: 30px;
+  width: auto;
+  margin: 68px 0; 
+}
+
+.nav__menu {
+  @extend %reset;
+  float: right;
+  list-style-type: none;
+  margin-top: 45px;
+}
+
+.nav__item {
+  @extend %reset;
+  display: inline-block;
+  height: 80px;
+}
+
+.nav__link {
+  @extend %reset;
+  text-decoration: none;
+  color: $white;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 80px;
+  height: 80px;
+  margin: 0 37px;
+  &:hover {
+    opacity: .9;
+  }
+}
+
+.nav__link--border {
+  padding: 16px 30px;
+  border: 2px solid $blue--border;
+  border-radius: 30px;
+}

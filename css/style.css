@@ -1,4 +1,4 @@
-.html, .body, .nav, .nav_logo, .nav__menu, .nav__item, .nav__link, .hero, .hero__block, .hero__h1, .hero__h2, .hero__button, .hero__img, .section, .section__article, .section__figure, .section__img, .section__container, .section__header, .section__description, .section__card-list, .section__card-container, .section__card, .section__card-figure, .section__card-img, .section__card-caption, .section__card-description, .section__card-link, .fa-chevron-right {
+.html, .body, .section, .nav, .nav_logo, .nav__menu, .nav__item, .nav__link, .hero, .hero__block, .hero__h1, .hero__h2, .hero__button, .hero__img, .section__article, .section__figure, .section__img, .section__container, .section__header, .section__description, .section__card-list, .section__card-container, .section__card, .section__card-figure, .section__card-img, .section__card-caption, .section__card-description, .section__card-link, .fa-chevron-right {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -19,6 +19,17 @@
   opacity: 0;
   background: #fff;
   transition: none;
+}
+
+.section {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1280px) {
+  .section {
+    width: 100%;
+  }
 }
 
 .nav {
@@ -129,25 +140,8 @@
   height: 64px;
 }
 
-.section {
-  width: 1280px;
-  margin: 0 auto;
-}
-
-@media (max-width: 1280px) {
-  .section {
-    width: 100%;
-  }
-}
-
 .section--what-we-do {
-  height: 1192px;
-}
-
-@media (max-width: 1280px) {
-  .section--what-we-do {
-    height: 100%;
-  }
+  height: 100%;
 }
 
 .section__article {
@@ -261,6 +255,44 @@
   padding-left: 10px;
   padding-bottom: 1px;
   vertical-align: middle;
+}
+
+.section--technology {
+  min-height: 900px;
+  background: #f0f0f0;
+  width: 100vw;
+  position: relative;
+}
+
+.section--technology-white {
+  background: #fff;
+}
+
+.section__article--centered {
+  width: 1280px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: auto;
+}
+
+.section__container--centered {
+  margin: auto 0;
+}
+
+.section__figure--centered {
+  margin: auto 0;
+  max-height: 544px;
+}
+
+.section__img--heigth-corrected {
+  max-height: 544px;
+}
+
+.section__description--small {
+  padding-top: 47px;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */

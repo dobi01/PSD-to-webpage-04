@@ -1,17 +1,5 @@
-.section {
-  @extend %reset;
-  width: $desktop-width;
-  margin: 0 auto;
-  @media (max-width: $desktop-width) {
-    width: 100%;
-  }
-}
-
 .section--what-we-do {
-  height: 1192px;
-  @media (max-width: $desktop-width) {
-    height: 100%;
-  }
+  height: 100%;
 }
 
 .section__article {

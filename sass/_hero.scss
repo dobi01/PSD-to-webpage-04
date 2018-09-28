@@ -7,7 +7,7 @@
 
 .hero__block {
   @extend %reset;
-  width: 1280px;
+  max-width: $desktop-width;
   margin: 0 auto;
   padding: 227px 0 0;
 }
@@ -31,7 +31,7 @@
 .hero__h2 {
   @extend %reset;
   font-size: 20px;
-  color: $blue--h2;
+  color: $blue--header;
   line-height: 70px;
   font-weight: 300;
   margin-bottom: 107px;

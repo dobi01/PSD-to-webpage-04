@@ -1,13 +1,12 @@
 .nav {
   @extend %reset;
-  width: 1280px;
+  max-width: $desktop-width;
   height: 80px;
   margin: 0 auto;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   left: 0;
-  // border: 2px solid yellow;
   display: block;
   z-index: 10;
 }
@@ -42,6 +41,7 @@
   line-height: 80px;
   height: 80px;
   margin: 0 37px;
+  transition: all .1s ease-in-out;
   &:hover {
     opacity: .9;
   }

@@ -3,25 +3,34 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: none;
+  // border: none;
 }
 
 // * {
 //   border: 1px solid red;
 // }
 
+// Color scheme
 $white: #fff;
-$blue--h2: #72b2f2;
+$blue--header: #72b2f2;
 $blue-light--button: #6166ed;
 $blue-dark--button: #312e64; 
-$blue-dark--h2: #161765;
+$blue-dark--text: #161765;
 $blue--border: #5c7cc7;
-$violet--h1: #4b479e;
+$violet: #4b479e;
 $black--text: #333336;
 $green--text: #7dbd6e;
+$aquamarine: #52e6c7;
+$shadow: #e9e9f0;
+
+// Breakpoints
+$desktop-width: 1280px;
+$tablet-width: 768px;
+$mobile-width: 320px;
 
 .html, .body {
   @extend %reset;
+  width: 100vw;
   text-size-adjust: none;
   overflow-x: hidden;
   background-color: #fff;
@@ -29,6 +38,16 @@ $green--text: #7dbd6e;
   transition: opacity .8s ease-in-out;
   font-family: 'Montserrat', sans-serif;
   position: relative;
+  // font-size: 100%;
+  // @media (max-width: $desktop-width) {
+  //   font-size: 90%;
+  // }
+  // @media (max-width: $tablet-width) {
+  //   font-size: 70%;
+  // }
+  // @media (max-width: $mobile-width) {
+  //   font-size: 60%;
+  // }
 }
 
 .body--fade-out {

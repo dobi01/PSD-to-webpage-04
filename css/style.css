@@ -1,4 +1,4 @@
-.html, .body, .section, .nav, .nav_logo, .nav__menu, .nav__item, .nav__link, .hero, .hero__block, .hero__h1, .hero__h2, .hero__button, .hero__img, .section__article, .section__figure, .section__img, .section__container, .section__header, .section__description, .section__card-list, .section__card-container, .section__card, .section__card-figure, .section__card-img, .section__card-caption, .section__card-description, .section__card-link, .fa-chevron-right {
+.html, .body, .section, .nav, .nav_logo, .nav__menu, .nav__item, .nav__link, .hero, .hero__block, .hero__h1, .hero__h2, .hero__button, .hero__img, .container--fluid, .section__figure, .section__img, .section__container, .section__header, .section__description, .section__card-list, .section__card-container, .section__card, .section__card-figure, .section__card-img, .section__card-caption, .section__card-description, .section__card-link, .fa-chevron-right, .address__text, .social-icons, .social-icons__link, .social-icons__icon, .footer {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -144,7 +144,7 @@
   height: 100%;
 }
 
-.section__article {
+.container--fluid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -268,7 +268,7 @@
   background: #fff;
 }
 
-.section__article--centered {
+.container--fluid-centered {
   width: 1280px;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -293,6 +293,56 @@
 .section__description--small {
   padding-top: 47px;
   font-size: 14px;
+}
+
+.section--contact {
+  height: 627px;
+  background: url(../img/bg1.jpg) no-repeat right;
+  width: 100vw;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.address__text {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 68px;
+}
+
+.address__text--green {
+  color: #7dbd6e;
+}
+
+.social-icons__link {
+  text-decoration: none;
+  color: #fff;
+  cursor: default;
+  width: 20px;
+  margin-right: 31px;
+  display: inline-block;
+}
+
+.social-icons__icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.social-icons__icon:hover {
+  color: #7dbd6e;
+}
+
+.footer {
+  max-width: 1280px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto 73px;
 }
 
 /*# sourceMappingURL=style.css.map */

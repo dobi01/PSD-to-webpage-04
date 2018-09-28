@@ -2,7 +2,7 @@
   height: 100%;
 }
 
-.section__article {
+.container--fluid {
   @extend %reset;
   display: flex;
   flex-wrap: wrap;

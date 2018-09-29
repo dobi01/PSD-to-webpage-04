@@ -1,0 +1,265 @@
+.section--what-we-do {
+  height: 100%;
+}
+
+.section--technology {
+  min-height: 900px;
+  background: $gray;
+  width: 100vw;
+  position: relative;
+  @media (max-width: calc(#{$desktop-width} + 200px)) {
+    height: 100%;
+  }
+  @media (max-width: 450px) {
+    min-height: 800px; 
+  }
+}
+
+.section--technology-white {
+  background: $white;
+}
+
+.container--absolute {
+  @extend %reset;
+  width: $desktop-width;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 5vh;
+  left: 0;
+  right: 0;
+}
+
+.container--fluid {
+  @extend %reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  @media (max-width: $desktop-width) {
+    justify-content: space-around;
+  }
+}
+
+.container--fluid-centered {
+  width: $desktop-width;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: auto;
+}
+
+.container--fluid-col-5 {
+  max-width: 687px;
+  position: relative;
+}
+
+.container--fluid-col-10 {
+  max-width: $desktop-width;
+  width: calc(100vw - 30px);
+}
+
+.container--with-margin {
+  transform: translate(-50%, -22%);
+  top: 22%;
+  left: 50%;
+}
+
+.section__figure {
+  @extend %reset;
+  margin: 112px 35px 0;
+  max-width: calc(1200px / 2);
+  max-height: calc(848px / 2);
+}
+
+.section__figure--centered {
+  margin: auto 0;
+  max-height: 544px;
+}
+
+.section__img {
+  @extend %reset;
+  width: 100%;
+}
+
+.section__img--heigth-corrected {
+  height: 544px;
+  @media (max-width: calc(#{$desktop-width} + 200px)) {
+    margin-top: 30px;
+    max-height: 544px;
+    height: 70vw;
+    width: auto;
+  }
+}
+
+.section__container {
+  @extend %reset;
+  max-width: calc(#{$desktop-width} / 2 - 35px * 2);
+  margin-top: 169px;
+  text-align: center;
+  @media (max-width: calc(#{$desktop-width} + 200px)) {
+    margin-top: 90px;
+    padding: 80px 30px;
+  }
+  @media (max-width: $desktop-width) {
+    margin-top: 90px;
+    padding: 0 30px;
+  }
+}
+
+.section__container--centered {
+  margin: auto 0;
+}
+
+.section__header {
+  @extend %reset;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: $violet;
+  margin-bottom: 3rem;
+}
+
+.section__description {
+  @extend %reset;
+  font-size: .9rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+  color: $black--text;
+}
+
+.section__description--small {
+  padding-top: 2rem;
+  font-size: .8rem;
+}
+
+.section__card-list {
+  @extend %reset;
+  margin-top: 141px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  @media (max-width: calc(#{$desktop-width} + 200px)) {
+    margin: 90px 0;
+  }
+}
+
+.section__card-container {
+  @extend %reset;
+  height: 457px;
+  width: 268px;
+  margin-bottom: 80px;
+  @media (max-width: calc(#{$desktop-width} + 200px)) {
+    width: 50%;
+    height: 100%;
+    padding: 1% 5%;
+    margin-bottom: 40px;
+  }
+  &:nth-of-type(odd) {
+    @media (max-width: calc(#{$desktop-width} + 200px)) {
+      padding-right: 2.5%;
+    }
+    @media (max-width: 600px) {
+      padding: 1% 5%;
+    }
+  }
+  &:nth-of-type(even) {
+    @media (max-width: calc(#{$desktop-width} + 200px)) {
+      padding-left: 2.5%;
+    }
+    @media (max-width: 600px) {
+      padding: 1% 5%;
+    }
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.section__card {
+  @extend %reset;
+  margin: 0 auto;
+  height: 457px;
+  width: 268px;
+  color: $blue-dark--text;
+  position: relative;
+  box-shadow: 0 0 40px 1px $shadow;
+  @media (max-width: calc(#{$desktop-width} + 200px)) {
+    width: 100%;
+    height: 100%;
+  }
+  &:last-of-type {
+    @media (max-width: calc(#{$desktop-width} + 200px)) {
+      padding-bottom: 54px;
+    }
+  }
+}
+
+.section__card-figure {
+  @extend %reset;
+  padding: 36px 35px 20px;
+}
+
+.section__card-img {
+  @extend %reset;
+  margin-bottom: 41px;
+  height: 130px;
+}
+
+.section__card-caption {
+  @extend %reset;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.7rem;
+}
+
+.section__card-description {
+  @extend %reset;
+  font-size: .89rem;
+  font-weight: 500;
+  line-height: 1.3rem;
+  margin: 0 35px;
+  padding-right: 20px;
+  @media (max-width: calc(#{$desktop-width} + 200px)) {
+    padding-right: 40px;
+    padding-bottom: 30px;
+  }
+  @media (max-width: $desktop-width) {
+    font-size: .95rem;
+    line-height: 1.35rem;
+  }
+  @media (max-width: 815px) {
+    padding-right: 25px;
+  }
+}
+
+.section__card-link {
+  @extend %reset;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 54px;
+  height: 54px;
+  width: 100%;
+  display: inline-block;
+  color: $white;
+  background: $violet;
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  transition: all .5s ease-in-out;
+  &:hover {
+    background: $blue-dark--text;
+  }
+}
+
+.fa-chevron-right {
+  @extend %reset;
+  color: $aquamarine;
+  font-size: 10px;
+  padding-left: 10px;
+  padding-bottom: 1px;
+  vertical-align: middle;
+}

@@ -3,7 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  // border: none;
+  border: none;
 }
 
 // * {
@@ -13,12 +13,12 @@
 // Color scheme
 $white: #fff;
 $blue--header: #72b2f2;
+$blue--border: #5c7cc7;
 $blue-light--button: #6166ed;
 $blue-dark--button: #312e64; 
 $blue-dark--text: #161765;
-$blue--border: #5c7cc7;
-$violet: #4b479e;
 $black--text: #333336;
+$violet: #4b479e;
 $green: #7dbd6e;
 $aquamarine: #52e6c7;
 $shadow: #e9e9f0;

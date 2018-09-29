@@ -67,7 +67,7 @@
   </header>
   <main>
     <section class="section section--what-we-do">
-      <article class="container--fluid">
+      <article class="container--fluid container--fluid-col-10">
         <figure class="section__figure">
           <img class="section__img" src="img/awww-illustration-1.png" alt="illustration presenting modern web development">
         </figure>
@@ -123,7 +123,7 @@
       </ul>
     </section>
     <section class="section section--technology">
-      <article class="container--fluid container--fluid-centered">
+      <article class="container--fluid container--fluid-centered container--fluid-col-10">
         <div class="section__container section__container--centered">
           <h1 class="section__header">Technology</h1>
           <p class="section__description">We create beautiful, fast and secure website tailored exclusively 
@@ -139,7 +139,7 @@
       </article>
     </section>
     <section class="section section--technology section--technology-white">
-      <article class="container--fluid container--fluid-centered">
+      <article class="container--fluid container--fluid-centered container--fluid-col-10">
         <figure class="section__figure section__figure--centered">
           <img class="section__img section__img--heigth-corrected" src="img/awww-stack.png" alt="">
         </figure>
@@ -155,7 +155,7 @@
       </article>
     </section>
     <section class="section section--contact">
-      <div class="container--fluid container--fluid-centered">
+      <div class="container--fluid container--fluid-centered container--fluid-col-10">
         <address class="address">
           <p class="address__text">
             al. Pokoju 1 (XI piętro)<br>
@@ -181,24 +181,46 @@
             </a>
           </div>
         </address>
-        <!-- <form action="" method="post">
-          <h1>Formularz kontaktowy</h1>
-          <label for="POST-name">IMIĘ I NAZWISKO</label>
-          <input id="POST-name" type="text" name="name" id="name" required>
-          <label for="POST-email">ADRES E-MAIL</label>
-          <input id="POST-email" type="text" name="email" id="email" required>
-          <label for="POST-phone">NUMER TELEFONU</label>
-          <input id="POST-phone" type="text" name="phone" id="phone" required>
-          <label for="POST-title">TEMAT WIADOMOŚCI</label>
-          <input id="POST-title" type="text" name="title" id="title" required>
-          <label for="POST-message">TREŚĆ WIADOMOŚCI</label>
-          <textarea id="POST-message" name="POST-message" rows="3" cols="33" maxlength="200" wrap="hard"></textarea>
-          <input type="submit" value="Save">
-        </form> -->
+        <form class="form" action="" method="post">
+          <h1 class="form__header">Formularz kontaktowy</h1>
+          <div class="container--fluid container--fluid-col-5">
+            <div class="form__container">
+              <input class="form__input" id="POST-name" type="text" minlength="3" maxlength="40" 
+                     title="Min. 3 znaki" name="name" id="name" 
+                     onblur="this.setAttribute('value', this.value);" value="" required>
+              <label class="form__label" for="POST-name">IMIĘ I NAZWISKO</label>
+            </div>
+            <div class="form__container">
+              <input class="form__input" id="POST-email" type="email" 
+                     pattern="[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
+                     [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*"
+                     title="Sprawdź podany adres e-mail" name="email" id="email" 
+                     onblur="this.setAttribute('value', this.value);" value="" required>
+              <label class="form__label" for="POST-email">ADRES E-MAIL</label>
+            </div>
+            <div class="form__container">
+              <input class="form__input" id="POST-phone" type="tel" 
+                     pattern="[+\w()]*(?=(?:\d\D*){9,})[\w\s+.-]{9,40}" 
+                     title="Min. 9 cyfr" name="phone" id="phone" 
+                     onblur="this.setAttribute('value', this.value);" value="" required>
+              <label class="form__label" for="POST-phone">NUMER TELEFONU</label>
+            </div>
+            <div class="form__container">
+              <input class="form__input" id="POST-title" type="text" minlength="3" maxlength="40"
+                     title="Min. 3 znaki" name="title" id="title" 
+                     onblur="this.setAttribute('value', this.value);" value="" required>
+              <label class="form__label" for="POST-title">TEMAT WIADOMOŚCI</label>
+            </div>
+            <label class="form__label form__label--textarea" for="POST-message">TREŚĆ WIADOMOŚCI</label>
+            <textarea class="form__textarea" id="POST-message" name="POST-message" 
+                      title="Min. 3 znaki" minlength="3" rows="4" maxlength="200" wrap="hard" required></textarea>
+            <input class="form__button" type="submit" value="WYŚLIJ WIADOMOŚĆ">
+          </div>
+        </form>
       </div>
     </section>
   </main>
   <footer class="footer">© Copyright 2018 Infinity Power International. Wszelkie prawa zastrzeżone.</footer>
   <script src="js/script.js"></script>
 </body>
-</html>
+</html> 

@@ -9,15 +9,6 @@
   background: $white;
 }
 
-.container--fluid-centered {
-  width: $desktop-width;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  height: auto;
-}
-
 .section__container--centered {
   margin: auto 0;
 }

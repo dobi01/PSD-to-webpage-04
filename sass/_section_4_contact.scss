@@ -7,6 +7,10 @@
   text-transform: uppercase;
 }
 
+.address {
+  padding-top: 81px;
+}
+
 .address__text {
   @extend %reset;
   font-style: normal;
@@ -40,6 +44,112 @@
   &:hover {
     color: $green;
   }
+}
+
+.form {
+  @extend %reset;
+  padding: 0 64px;
+}
+
+.form__header {
+  @extend %reset;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: initial;
+  margin-bottom: 46px;
+}
+
+.form__container {
+  @extend %reset;
+  width: 330px;
+  position: relative;
+}
+
+.form__label {
+  @extend %reset;
+  width: 100%;
+  margin-right: 25px;
+  display: block;
+  font-size: 14px;
+  font-family: 'Worksans', sans-serif;
+  cursor: text;
+  transition: all .5s ease-in-out;
+  position: absolute;
+  top: 0;
+}
+
+.form__label--textarea {
+  position: static;
+}
+
+@keyframes autofill {
+  to {
+    color: $white;
+    background: inherit;
+  }
+}
+
+.form__input {
+  @extend %reset;
+  width: 100%;
+  margin-right: 25px;
+  display: block;
+  background: inherit;
+  border-bottom: 1px solid $white;
+  font-size: 14px;
+  font-family: 'Worksans', sans-serif;
+  margin-bottom: 46px;
+  outline: none;
+  height: 30px;
+  padding: 0 0 5px;
+  animation-name: autofill;
+  animation-fill-mode: both;
+  &:focus + .form__label {
+    top: -15px;
+    font-size: 12px;
+  }
+  &:focus:valid {
+    border-color: $green;
+  }
+  &:focus:invalid {
+    border-color: red;
+  }
+  &:not([value=""]) + .form__label {
+    display: none;
+  }
+}
+
+.form__textarea {
+  @extend %reset;
+  width: 100%;
+  background: inherit;
+  border: none;
+  border-bottom: 1px solid $white;
+  overflow: auto; 
+  resize: none;
+  color: $white;
+  font-size: 14px;
+  font-family: 'Worksans', sans-serif;
+  &:focus:valid {
+    border-color: $green;
+  }
+  &:focus:invalid {
+    border-color: red;
+  }
+}
+
+.form__button {
+  @extend %reset;
+  color: $green;
+  border: 1px solid $green;
+  border-radius: 27px;
+  width: 224px;
+  padding: 20px 0;
+  background: inherit;
+  position: absolute;
+  right: 0;
+  bottom: -100px;
+  cursor: pointer;
 }
 
 .footer {

@@ -127,6 +127,7 @@
     z-index: 10;
     flex-direction: column;
     justify-content: space-evenly;
+    box-shadow: 0 0 40px 1px #e9e9f0;
   }
 }
 

@@ -130,6 +130,8 @@
   color: $white;
   font-size: 14px;
   font-family: 'Worksans', sans-serif;
+  outline: none;
+  padding-top: 5px;
   &:focus:valid {
     border-color: $green;
   }

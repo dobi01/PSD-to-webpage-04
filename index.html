@@ -30,8 +30,9 @@
   <script>document.body.className += " body--fade-out";</script>
   <nav class="nav">
     <img class="nav_logo" src="img/AWWW_logo.png" alt="AWWW Software logo">
+    <span class="nav__hamburger">☰</span>
     <ul class="nav__menu">
-      <li class="nav__item"><a class="nav__link" href="#">About</a></li>
+      <li class="nav__item"><a class="nav__link" href="#">About us</a></li>
       <li class="nav__item"><a class="nav__link" href="#">Services</a></li>
       <li class="nav__item"><a class="nav__link" href="#">Case studies</a></li>
       <li class="nav__item"><a class="nav__link nav__link--border" href="#">Contact</a></li>
@@ -40,33 +41,35 @@
   <header class="hero">
     <div class="hero__block">
       <h1 class="hero__h1">We create websites<br>and eCommerce</h1>
-      <h2 class="hero__h2">Wordpress & Woocommerce Software House</h2>
-      <a class="hero__button hero__button--light" href="#">What we do?</a>
-      <a class="hero__button hero__button--dark" href="#">Watch team video</a>
+      <h2 class="hero__h2">Wordpress & Woocommerce Software&nbsp;House</h2>
+      <a class="hero__button hero__button--light" href="#what-we-do">What we do?</a>
+      <a class="hero__button hero__button--dark" href="#">Watch&nbsp;team&nbsp;video</a>
     </div>
-    <ul class="hero__block hero__block--icons">
-      <li class="hero__icon">
-        <img class="hero__img" src="img/Lotto_logo_polska.svg" alt="Lotto's">
-      </li>
-      <li class="hero__icon">
-        <img class="hero__img" src="img/Lotto_logo_polska.svg" alt="">
-      </li>
-      <li class="hero__icon">
-        <img class="hero__img" src="img/Lotto_logo_polska.svg" alt="">
-      </li>
-      <li class="hero__icon">
-        <img class="hero__img" src="img/Lotto_logo_polska.svg" alt="">
-      </li>
-      <li class="hero__icon">
-        <img class="hero__img" src="img/Lotto_logo_polska.svg" alt="">
-      </li>
-      <li class="hero__icon">
-        <img class="hero__img" src="img/Lotto_logo_polska.svg" alt="">
-      </li>
-    </ul>
+    <div class="container--absolute">
+      <ul class="hero__block hero__block--icons">
+        <li class="hero__icon">
+          <img class="hero__img" src="img/Lotto_logo_polska.svg" alt="Lotto's">
+        </li>
+        <li class="hero__icon">
+          <img class="hero__img" src="img/Lotto_logo_polska.svg" alt="">
+        </li>
+        <li class="hero__icon">
+          <img class="hero__img" src="img/Lotto_logo_polska.svg" alt="">
+        </li>
+        <li class="hero__icon">
+          <img class="hero__img" src="img/Lotto_logo_polska.svg" alt="">
+        </li>
+        <li class="hero__icon">
+          <img class="hero__img" src="img/Lotto_logo_polska.svg" alt="">
+        </li>
+        <li class="hero__icon">
+          <img class="hero__img" src="img/Lotto_logo_polska.svg" alt="">
+        </li>
+      </ul>      
+    </div>
   </header>
   <main>
-    <section class="section section--what-we-do">
+    <section class="section section--what-we-do" id="what-we-do">
       <article class="container--fluid container--fluid-col-10">
         <figure class="section__figure">
           <img class="section__img" src="img/awww-illustration-1.png" alt="illustration presenting modern web development">
@@ -122,7 +125,7 @@
         </li>
       </ul>
     </section>
-    <section class="section section--technology">
+    <section class="section section--technology" id="technology-1">
       <article class="container--fluid container--fluid-centered container--fluid-col-10">
         <div class="section__container section__container--centered">
           <h1 class="section__header">Technology</h1>
@@ -138,7 +141,7 @@
         </figure>
       </article>
     </section>
-    <section class="section section--technology section--technology-white">
+    <section class="section section--technology section--technology-white" id="technology-2">
       <article class="container--fluid container--fluid-centered container--fluid-col-10">
         <figure class="section__figure section__figure--centered">
           <img class="section__img section__img--heigth-corrected" src="img/awww-stack.png" alt="">
@@ -154,8 +157,8 @@
         </div>
       </article>
     </section>
-    <section class="section section--contact">
-      <div class="container--fluid container--fluid-centered container--fluid-col-10">
+    <section class="section section--contact" id="contact">
+      <div class="container--fluid container--fluid-centered container--fluid-col-10 container--with-margin">
         <address class="address">
           <p class="address__text">
             al. Pokoju 1 (XI piętro)<br>
@@ -221,6 +224,7 @@
     </section>
   </main>
   <footer class="footer">© Copyright 2018 Infinity Power International. Wszelkie prawa zastrzeżone.</footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html> 

@@ -39,16 +39,16 @@ $mobile-width: 320px;
   transition: opacity .8s ease-in-out;
   font-family: 'Montserrat', sans-serif;
   position: relative;
-  // font-size: 100%;
-  // @media (max-width: $desktop-width) {
-  //   font-size: 90%;
-  // }
-  // @media (max-width: $tablet-width) {
-  //   font-size: 70%;
-  // }
-  // @media (max-width: $mobile-width) {
-  //   font-size: 60%;
-  // }
+  font-size: 100%;
+  @media (max-width: $desktop-width) {
+    font-size: 95%;
+  }
+  @media (max-width: $tablet-width) {
+    font-size: 90%;
+  }
+  @media (max-width: $mobile-width) {
+    font-size: 85%;
+  }
 }
 
 .body--fade-out {

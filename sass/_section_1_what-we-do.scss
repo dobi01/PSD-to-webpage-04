@@ -2,6 +2,16 @@
   height: 100%;
 }
 
+.container--absolute {
+  @extend %reset;
+  width: $desktop-width;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 5vh;
+  left: 0;
+  right: 0;
+}
+
 .container--fluid {
   @extend %reset;
   display: flex;
@@ -26,6 +36,9 @@
 
 .container--fluid-col-10 {
   max-width: $desktop-width;
+}
+
+.container--with-margin {
   transform: translate(-50%, -22%);
   top: 22%;
   left: 50%;

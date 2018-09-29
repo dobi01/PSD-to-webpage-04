@@ -1,4 +1,4 @@
-.html, .body, .section, .nav, .nav_logo, .nav__menu, .nav__item, .nav__link, .hero, .hero__block, .hero__h1, .hero__h2, .hero__button, .hero__img, .container--fluid, .section__figure, .section__img, .section__container, .section__header, .section__description, .section__card-list, .section__card-container, .section__card, .section__card-figure, .section__card-img, .section__card-caption, .section__card-description, .section__card-link, .fa-chevron-right, .address__text, .social-icons, .social-icons__link, .social-icons__icon, .form, .form__header, .form__container, .form__label, .form__input, .form__textarea, .form__button, .footer {
+.html, .body, .section, .nav, .nav_logo, .nav__menu, .nav__item, .nav__link, .hero, .hero__block, .hero__h1, .hero__h2, .hero__button, .hero__img, .container--absolute, .container--fluid, .section__figure, .section__img, .section__container, .section__header, .section__description, .section__card-list, .section__card-container, .section__card, .section__card-figure, .section__card-img, .section__card-caption, .section__card-description, .section__card-link, .fa-chevron-right, .address__text, .social-icons, .social-icons__link, .social-icons__icon, .form, .form__header, .form__container, .form__label, .form__input, .form__textarea, .form__button, .footer {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -14,6 +14,25 @@
   transition: opacity .8s ease-in-out;
   font-family: 'Montserrat', sans-serif;
   position: relative;
+  font-size: 100%;
+}
+
+@media (max-width: 1280px) {
+  .html, .body {
+    font-size: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .html, .body {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 320px) {
+  .html, .body {
+    font-size: 85%;
+  }
 }
 
 .body--fade-out {
@@ -35,7 +54,7 @@
 
 .nav {
   max-width: 1280px;
-  height: 80px;
+  height: 110px;
   margin: 0 auto;
   position: absolute;
   top: 0;
@@ -45,10 +64,49 @@
   z-index: 10;
 }
 
+@media (max-width: calc(1280px + 200px)) {
+  .nav {
+    margin: 0 15vw 0 10vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    margin: 0 8vw 0 5vw;
+  }
+}
+
+.nav__hamburger {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  .nav__hamburger {
+    display: inline-block;
+    float: right;
+    color: #fff;
+    z-index: 10;
+    font-size: 32px;
+    margin: 46px 0 41px;
+  }
+}
+
+@media (max-width: 450px) {
+  .nav__hamburger {
+    margin: 26px 0;
+  }
+}
+
 .nav_logo {
   height: 30px;
   width: auto;
   margin: 52px 0;
+}
+
+@media (max-width: 450px) {
+  .nav_logo {
+    margin: 32px 0;
+  }
 }
 
 .nav__menu {
@@ -57,25 +115,64 @@
   margin-top: 30px;
 }
 
+@media (max-width: 990px) {
+  .nav__menu {
+    width: 100vw;
+    height: calc(100vh - 130px);
+    background: #fff;
+    position: absolute;
+    float: none;
+    margin: 0;
+    left: -5vw;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
 .nav__item {
   display: inline-block;
   height: 80px;
 }
 
+@media (max-width: 990px) {
+  .nav__item {
+    width: 100%;
+    background: #fff;
+    height: 50px;
+    text-align: center;
+    display: block;
+  }
+}
+
 .nav__link {
   text-decoration: none;
   color: #fff;
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 600;
   text-align: center;
   line-height: 80px;
   height: 80px;
-  margin: 0 37px;
+  margin: 0 1.7rem;
   transition: all .1s ease-in-out;
 }
 
 .nav__link:hover {
   opacity: .9;
+}
+
+@media (max-width: 990px) {
+  .nav__link {
+    width: 100%;
+    background: #fff;
+    padding-bottom: 10px;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 0;
+    margin: 0;
+    color: #5c7cc7;
+    font-size: 1.1rem;
+  }
 }
 
 .nav__link--border {
@@ -88,61 +185,134 @@
 .hero {
   width: 100vw;
   height: 100vh;
-  background: url("../img/bg2.jpg") no-repeat center right;
+  background: url("../img/bg2.jpg") no-repeat center;
+  position: relative;
 }
 
 .hero__block {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 227px 0 0;
+  padding: 35vh 0 0;
+}
+
+@media (max-width: calc(1280px + 200px)) {
+  .hero__block {
+    margin: 0 10vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__block {
+    margin: 0 5vw;
+  }
+}
+
+@media (max-height: 700px) {
+  .hero__block {
+    padding: 25vh 0 0;
+  }
 }
 
 .hero__block--icons {
   list-style-type: none;
-  padding: 80px 0 0;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
 
+@media (max-width: 1280px) {
+  .hero__block--icons {
+    display: none;
+  }
+}
+
+@media (max-height: 620px) {
+  .hero__block--icons {
+    display: none;
+  }
+}
+
 .hero__h1 {
-  font-size: 56.54px;
+  font-size: 3rem;
   color: #fff;
-  line-height: 67.85px;
+  line-height: 3.3rem;
   font-weight: 700;
+  padding-right: 30px;
+}
+
+@media (max-width: 450px) {
+  .hero__h1 {
+    font-size: 2.5rem;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-height: 535px) {
+  .hero__h1 {
+    font-size: 2rem;
+    line-height: 2.7rem;
+  }
 }
 
 .hero__h2 {
-  font-size: 20px;
+  font-size: 1.07rem;
   color: #72b2f2;
-  line-height: 70px;
+  line-height: 4rem;
   font-weight: 300;
-  margin-bottom: 107px;
+  margin-bottom: 10vh;
+}
+
+@media (max-width: 450px) {
+  .hero__h2 {
+    line-height: 2rem;
+  }
 }
 
 .hero__button {
-  font-size: 18px;
+  font-size: .9rem;
+  font-weight: 600;
   color: #fff;
-  height: 49px;
   text-decoration: none;
-  padding: 18px 35px;
+  padding: .8rem 1.95rem;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .hero__button {
+    margin-right: 300px;
+  }
 }
 
 .hero__button--light {
   background: #6166ed;
-  margin-right: 11px;
+  margin-right: 5px;
 }
 
 .hero__button--dark {
   background: #312e64;
 }
 
+@media (max-width: 768px) {
+  .hero__button--dark {
+    margin-top: 10px;
+  }
+}
+
 .hero__img {
-  height: 64px;
+  height: 3.2rem;
 }
 
 .section--what-we-do {
   height: 100%;
+}
+
+.container--absolute {
+  width: 1280px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 5vh;
+  left: 0;
+  right: 0;
 }
 
 .container--fluid {
@@ -168,6 +338,9 @@
 
 .container--fluid-col-10 {
   max-width: 1280px;
+}
+
+.container--with-margin {
   transform: translate(-50%, -22%);
   top: 22%;
   left: 50%;
@@ -431,6 +604,8 @@
   color: #fff;
   font-size: 14px;
   font-family: 'Worksans', sans-serif;
+  outline: none;
+  padding-top: 5px;
 }
 
 .form__textarea:focus:valid {

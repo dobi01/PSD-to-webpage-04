@@ -2,60 +2,94 @@
   @extend %reset;
   width: 100vw;
   height: 100vh;
-  background: url('../img/bg2.jpg') no-repeat center right;
+  background: url('../img/bg2.jpg') no-repeat center;
+  position: relative;
 }
 
 .hero__block {
   @extend %reset;
   max-width: $desktop-width;
   margin: 0 auto;
-  padding: 227px 0 0;
+  padding: 35vh 0 0;
+  @media (max-width: calc(#{$desktop-width} + 200px)) {
+    margin: 0 10vw;
+  }
+  @media (max-width: $tablet-width) {
+    margin: 0 5vw;
+  }
+  @media (max-height: 700px) {
+    padding: 25vh 0 0;
+  }
 }
 
 .hero__block--icons {
   list-style-type: none;
-  padding: 80px 0 0;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
+  @media (max-height: 620px) {
+    display: none;
+  }
 }
 
 .hero__h1 {
   @extend %reset;
-  font-size: 56.54px;
+  font-size: 3rem;
   color: $white;
-  line-height: 67.85px;
+  line-height: 3.3rem;
   font-weight: 700;
+  padding-right: 30px;
+  @media (max-width: 450px) {
+    font-size: 2.5rem;
+    padding-bottom: 20px;
+  }
+  @media (max-height: 535px) {
+    font-size: 2rem;
+    line-height: 2.7rem;
+  }
 }
 
 .hero__h2 {
   @extend %reset;
-  font-size: 20px;
+  font-size: 1.07rem;
   color: $blue--header;
-  line-height: 70px;
+  line-height: 4rem;
   font-weight: 300;
-  margin-bottom: 107px;
+  margin-bottom: 10vh;
+  @media (max-width: 450px) {
+    line-height: 2rem;
+  }
 }
 
 .hero__button {
   @extend %reset;
-  font-size: 18px;
+  font-size: .9rem;
+  font-weight: 600;
   color: $white;
-  height: 49px;
   text-decoration: none;
-  padding: 18px 35px;
+  padding: .8rem 1.95rem;
+  display: inline-block;
+  @media (max-width: $tablet-width) {
+    margin-right: 300px;
+  }
 }
 
 .hero__button--light {
   background: $blue-light--button;
-  margin-right: 11px;
+  margin-right: 5px;
 }
 
 .hero__button--dark {
   background: $blue-dark--button;
+  @media (max-width: $tablet-width) {
+    margin-top: 10px;
+  }
 }
 
 .hero__img {
   @extend %reset;
-  height: 64px;
+  height: 3.2rem;
 }

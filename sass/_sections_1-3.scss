@@ -68,6 +68,14 @@
 .container--fluid-col-5 {
   max-width: 687px;
   position: relative;
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    justify-content: space-around;
+    width: 330px;
+  }
+  @media (max-width: 400px) {
+    width: 290px;
+  }
 }
 
 .container--fluid-col-10 {
@@ -76,10 +84,20 @@
   margin: 0 auto;
 }
 
-.container--with-margin {
+.container--margin {
   transform: translate(-50%, -22%);
   top: 22%;
   left: 50%;
+  @media (max-width: 400px) {
+    width: 290px;
+  }
+}
+
+.container--flex-reverse {
+  @media (max-width: 1152px) {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
 }
 
 .section__figure {

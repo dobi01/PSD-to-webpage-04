@@ -4,6 +4,9 @@
   height: 100vh;
   background: url('../img/bg2.jpg') no-repeat center;
   position: relative;
+  @media (min-height: 977px) {
+    height: 977px;
+  }
 }
 
 .hero__block {
@@ -17,8 +20,14 @@
   @media (max-width: 990px) {
     margin: 0 8vw;
   }
-  @media (min-height: 900px) and (orientation: portrait) {
+  @media (min-height: 900px) and (max-height: 976px) and (orientation: portrait) {
     padding: 55vh 0 0;
+  }
+  @media (min-height: 1050px) and (orientation: portrait) {
+    padding: 35vh 0 0;
+  }
+  @media (max-height: 900px) and (orientation: landscape) {
+    padding: 45vh 0 0;
   }
   @media (max-height: 700px) and (orientation: portrait) {
     padding: 25vh 0 0;

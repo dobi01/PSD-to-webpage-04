@@ -164,7 +164,7 @@
       </article>
     </section>
     <section class="section section--contact" id="contact">
-      <div class="container--fluid container--fluid-centered container--fluid-col-10 container--with-margin">
+      <div class="container--fluid container--fluid-centered container--fluid-col-10 container--margin container--flex-reverse">
         <address class="address">
           <p class="address__text">
             al. Pokoju 1 (XI piętro)<br>
@@ -193,7 +193,7 @@
         <form class="form" action="" method="post">
           <h1 class="form__header">Formularz kontaktowy</h1>
           <div class="container--fluid container--fluid-col-5">
-            <div class="form__container">
+            <div class="form__container form__container--margin">
               <input class="form__input" id="POST-name" type="text" minlength="3" maxlength="40" 
                      title="Min. 3 znaki" name="name" id="name" 
                      onblur="this.setAttribute('value', this.value);" value="" required>
@@ -207,7 +207,7 @@
                      onblur="this.setAttribute('value', this.value);" value="" required>
               <label class="form__label" for="POST-email">ADRES E-MAIL</label>
             </div>
-            <div class="form__container">
+            <div class="form__container form__container--margin">
               <input class="form__input" id="POST-phone" type="tel" 
                      pattern="[+\w()]*(?=(?:\d\D*){9,})[\w\s+.-]{9,40}" 
                      title="Min. 9 cyfr" name="phone" id="phone" 
@@ -222,14 +222,18 @@
             </div>
             <label class="form__label form__label--textarea" for="POST-message">TREŚĆ WIADOMOŚCI</label>
             <textarea class="form__textarea" id="POST-message" name="POST-message" 
-                      title="Min. 3 znaki" minlength="3" rows="4" maxlength="200" wrap="hard" required></textarea>
+                      title="Min. 3 znaki" minlength="3" rows="3" maxlength="200" wrap="hard" required></textarea>
             <input class="form__button" type="submit" value="WYŚLIJ WIADOMOŚĆ">
           </div>
         </form>
       </div>
     </section>
   </main>
-  <footer class="footer">© Copyright 2018 Infinity Power International. Wszelkie prawa zastrzeżone.</footer>
+  <footer class="footer">
+    <div class="container--fluid">
+      <p class="footer__text">© Copyright 2018 Infinity Power International. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/script.js"></script>
 </body>

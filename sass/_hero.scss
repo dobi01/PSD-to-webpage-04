@@ -3,7 +3,6 @@
   width: 100vw;
   height: 100vh;
   background: url('../img/bg2.jpg') no-repeat center;
-  position: relative;
   @media (min-height: 977px) {
     height: 977px;
   }
@@ -14,6 +13,7 @@
   max-width: $desktop-width;
   margin: 0 auto;
   padding: 35vh 0 0;
+  position: relative;
   @media (max-width: calc(#{$desktop-width} + 200px)) {
     margin: 0 10vw;
   }
@@ -27,9 +27,15 @@
     padding: 35vh 0 0;
   }
   @media (max-height: 900px) and (orientation: landscape) {
-    padding: 45vh 0 0;
+    padding: 35vh 0 0;
   }
   @media (max-height: 700px) and (orientation: portrait) {
+    padding: 25vh 0 0;
+  }
+  @media (max-height: 550px) and (orientation: portrait) {
+    padding: 30vh 0 0;
+  }
+  @media (max-height: 480px) and (orientation: portrait) {
     padding: 25vh 0 0;
   }
 }

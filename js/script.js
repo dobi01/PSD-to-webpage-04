@@ -1,13 +1,15 @@
+'use strict';
+
 window.onload = function() {
   document.body.className = 'body';
 
-  $('.hero__button--light').click(() => {
+  $('.hero__button--light').click(function() {
     $('html, body').animate({
-        scrollTop: $('#what-we-do').offset().top
+      scrollTop: $('#what-we-do').offset().top
     }, 1000);
   });
 
-  var windowMaxWidth990px = window.matchMedia("(max-width: 990px)"),
+  var windowMaxWidth990px = window.matchMedia('(max-width: 990px)'),
       navUl = $('.nav__menu'),
       menuButton = $('.nav__hamburger'),
       navLinks = navUl.find('.nav__link'),

@@ -31,12 +31,9 @@
   margin: 0 auto;
   position: absolute;
   z-index: 1;
-  bottom: 5vh;
+  bottom: -130px;
   left: 0;
   right: 0;
-  @media (max-width: calc(#{$desktop-width} + 200px)) {
-    margin: 0 10vw;
-  }
   @media (max-width: calc(#{$desktop-width} - 200px)) {
     display: none;
   }
@@ -154,11 +151,14 @@
   font-weight: 700;
   color: $violet;
   margin-bottom: 3rem;
+  @media (max-width: calc(#{$desktop-width} + 200px)) {
+    margin-bottom: 2rem;
+  }
 }
 
 .section__header--margin {
   @media (max-width: calc(#{$desktop-width} + 200px)) {
-    padding-top: 5rem;
+    padding-top: 3rem;
   }
 }
 

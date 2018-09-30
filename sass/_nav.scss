@@ -2,27 +2,19 @@
   @extend %reset;
   max-width: $desktop-width;
   height: 110px;
-  margin: 0 auto;
+  width: 100%;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   display: block;
   z-index: 10;
-  @media (max-width: calc(#{$desktop-width} + 200px)) {
-    margin: 0 10vw;
-  }
-  @media (max-width: 1136px) {
-    margin-left: 10vw;
-    margin-right: 8vw;
-  }
-  @media (max-width: 990px) {
-    margin: 0 8vw;
-  }
 }
 
 .nav__hamburger {
+  @extend %reset;
   display: none;
+  cursor: pointer;
   @media (max-width: 990px) {
     display: inline-block;
     float: right;

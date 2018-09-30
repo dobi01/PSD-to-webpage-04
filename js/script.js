@@ -16,7 +16,7 @@ window.onload = function() {
   function toggleMenu(mediaQuery) {
     if (mediaQuery.matches) { 
 
-      navUl.fadeOut('fast');
+      navUl.css('display', 'none');
 
       menuButton.click(function() { 
         if (navUl.is(':visible')) {
@@ -41,5 +41,9 @@ window.onload = function() {
   }
 
   windowMaxWidth990px.addListener(toggleMenu(windowMaxWidth990px));
+
+  $(window).on('resize', function() {
+    toggleMenu(windowMaxWidth990px);
+  });
 };
 

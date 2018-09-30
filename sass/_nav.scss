@@ -10,10 +10,14 @@
   display: block;
   z-index: 10;
   @media (max-width: calc(#{$desktop-width} + 200px)) {
-    margin: 0 15vw 0 10vw;
+    margin: 0 10vw;
   }
-  @media (max-width: $tablet-width) {
-    margin: 0 8vw 0 5vw;
+  @media (max-width: 1136px) {
+    margin-left: 10vw;
+    margin-right: 8vw;
+  }
+  @media (max-width: 990px) {
+    margin: 0 8vw;
   }
 }
 
@@ -30,6 +34,9 @@
   @media (max-width: 450px) {
     margin: 26px 0;
   }
+  @media (max-height: 830px) and (orientation: landscape) {
+    margin: 26px 0;
+  }
 }
 
 .nav_logo {
@@ -40,6 +47,9 @@
   @media (max-width: 450px) {
     margin: 32px 0;
   }
+  @media (max-height: 830px) and (orientation: landscape) {
+    margin: 32px 0;
+  }
 }
 
 .nav__menu {
@@ -48,17 +58,21 @@
   list-style-type: none;
   margin-top: 30px;
   @media (max-width: 990px) {
-    width: 100vw;
+    display: none;
+    width: 100%;
     height: calc(100vh - 130px);
     background: $white;
     position: absolute;
     float: none;
     margin: 0;
-    left: -5vw;
+    left: 0;
     z-index: 10;
     flex-direction: column;
     justify-content: space-evenly;
     box-shadow: 0 0 40px 1px $shadow;
+  }
+  @media (min-height: 830px) {
+    height: calc(100vh - 230px);
   }
 }
 

@@ -10,6 +10,12 @@
   @media (max-width: calc(#{$desktop-width} + 200px)) {
     height: 100%;
   }
+  @media (max-width: 1180px) {
+    min-height: 1000px; 
+  }
+  @media (max-width: 700px) {
+    min-height: 900px; 
+  }
   @media (max-width: 450px) {
     min-height: 800px; 
   }
@@ -21,12 +27,22 @@
 
 .container--absolute {
   @extend %reset;
-  width: $desktop-width;
+  max-width: $desktop-width;
   margin: 0 auto;
   position: absolute;
+  z-index: 1;
   bottom: 5vh;
   left: 0;
   right: 0;
+  @media (max-width: calc(#{$desktop-width} + 200px)) {
+    margin: 0 10vw;
+  }
+  @media (max-width: calc(#{$desktop-width} - 200px)) {
+    display: none;
+  }
+  @media (max-height: 620px) {
+    display: none;
+  }
 }
 
 .container--fluid {
@@ -57,6 +73,7 @@
 .container--fluid-col-10 {
   max-width: $desktop-width;
   width: calc(100vw - 30px);
+  margin: 0 auto;
 }
 
 .container--with-margin {
@@ -85,10 +102,12 @@
 .section__img--heigth-corrected {
   height: 544px;
   @media (max-width: calc(#{$desktop-width} + 200px)) {
-    margin-top: 30px;
     max-height: 544px;
     height: 70vw;
     width: auto;
+  }
+  @media (max-width: 1181px) {
+    margin-top: 30px;
   }
 }
 
@@ -119,6 +138,12 @@
   margin-bottom: 3rem;
 }
 
+.section__header--margin {
+  @media (max-width: calc(#{$desktop-width} + 200px)) {
+    padding-top: 5rem;
+  }
+}
+
 .section__description {
   @extend %reset;
   font-size: .9rem;
@@ -128,8 +153,10 @@
 }
 
 .section__description--small {
-  padding-top: 2rem;
   font-size: .8rem;
+  &:nth-of-type(2) {
+    padding-top: 1.6rem;
+  }
 }
 
 .section__card-list {
@@ -143,6 +170,9 @@
   text-align: left;
   @media (max-width: calc(#{$desktop-width} + 200px)) {
     margin: 90px 0;
+  }
+  @media (max-width: 600px) {
+    margin: 90px 0 40px;
   }
 }
 
@@ -175,6 +205,7 @@
   }
   @media (max-width: 600px) {
     width: 100%;
+    margin-bottom: 30px;
   }
 }
 

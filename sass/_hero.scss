@@ -14,20 +14,26 @@
   @media (max-width: calc(#{$desktop-width} + 200px)) {
     margin: 0 10vw;
   }
-  @media (max-width: $tablet-width) {
-    margin: 0 5vw;
+  @media (max-width: 990px) {
+    margin: 0 8vw;
   }
-  @media (max-height: 700px) {
+  @media (min-height: 900px) and (orientation: portrait) {
+    padding: 55vh 0 0;
+  }
+  @media (max-height: 700px) and (orientation: portrait) {
     padding: 25vh 0 0;
   }
 }
 
 .hero__block--icons {
+  @extend %reset;
+  max-width: $desktop-width;
   list-style-type: none;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  @media (max-width: $desktop-width) {
+  z-index: 1;
+  @media (max-width: $desktop-width - 200px) {
     display: none;
   }
   @media (max-height: 620px) {
@@ -72,6 +78,8 @@
   text-decoration: none;
   padding: .8rem 1.95rem;
   display: inline-block;
+  cursor: pointer;
+  z-index: 5;
   @media (max-width: $tablet-width) {
     margin-right: 300px;
   }
